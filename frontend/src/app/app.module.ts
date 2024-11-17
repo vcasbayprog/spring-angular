@@ -9,6 +9,14 @@ import { BookCreateComponent } from './book-create/book-create.component';
 import { FormsModule } from '@angular/forms';
 import { BookDeleteComponent } from './book-delete/book-delete.component';
 import { BookUpdateComponent } from './book-update/book-update.component';
+import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import { BoardUserComponent } from './board-user/board-user.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { RegisterComponent } from './register/register.component';
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -16,7 +24,14 @@ import { BookUpdateComponent } from './book-update/book-update.component';
     BookListComponent,
     BookCreateComponent,
     BookDeleteComponent,
-    BookUpdateComponent
+    BookUpdateComponent,
+    BoardAdminComponent,
+    BoardModeratorComponent,
+    BoardUserComponent,
+    HomeComponent,
+    LoginComponent,
+    ProfileComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +39,7 @@ import { BookUpdateComponent } from './book-update/book-update.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
